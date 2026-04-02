@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #ffe6f0;
+    text-align: center;
+    color: #333;
+  }
+
+  .container {
+    margin-top: 100px;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ff66a3;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  #secret {
+    display: none;
+    margin-top: 50px;
+    animation: fadeIn 2s;
+  }
+
+  img {
+    width: 200px;
+    border-radius: 15px;
+    margin: 10px;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container" id="lock">
+  <h2>Hey Najju 💌</h2>
+  <p>Enter the password to unlock</p>
+  <input type="password" id="pass" placeholder="Password">
+  <br>
+  <button onclick="check()">Unlock ❤️</button>
+</div>
+
+<div id="secret">
+  <h2>I made this just for you 🫶</h2>
+  <p id="message"></p>
+
+  <img src="https://via.placeholder.com/200" />
+  <img src="https://via.placeholder.com/200" />
+
+  <p>You mean a lot to me 💖</p>
+</div>
+
+<script>
+function check() {
+  var p = document.getElementById("pass").value;
+  if (p === "2705") { // <-- Updated password
+    document.getElementById("lock").style.display = "none";
+    document.getElementById("secret").style.display = "block";
+    typeMessage();
+  } else {
+    alert("Wrong password 😢");
+  }
+}
+
+function typeMessage() {
+  let text = "From the moment we became friends, everything just felt lighter. This is just a small reminder of how much you mean to me 💕";
+  let i = 0;
+  let speed = 50;
+
+  function typing() {
+    if (i < text.length) {
+      document.getElementById("message").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    }
+  }
+
+  typing();
+}
+</script>
+
+</body>
+</html>
