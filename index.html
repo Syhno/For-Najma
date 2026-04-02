@@ -55,7 +55,7 @@
 <body>
 
 <div class="container" id="lock">
-  <h2>Hey Najju 💌</h2>
+  <h2>Hey you 💌</h2>
   <p>Enter the password to unlock</p>
   <input type="password" id="pass" placeholder="Password">
   <br>
@@ -66,6 +66,7 @@
   <h2>I made this just for you 🫶</h2>
   <p id="message"></p>
 
+  <!-- Your GitHub-hosted images -->
   <img src="https://github.com/Syhno/For-Najma/blob/main/WhatsApp%20Image%202026-04-02%20at%2021.46.27.jpeg?raw=true" />
   <img src="https://github.com/Syhno/For-Najma/blob/main/WhatsApp%20Image%202026-04-02%20at%2021.46.29.jpeg?raw=true" />
 
@@ -75,7 +76,7 @@
 <script>
 function check() {
   var p = document.getElementById("pass").value;
-  if (p === "2705") { // <-- Updated password
+  if (p === "2705") { // Password
     document.getElementById("lock").style.display = "none";
     document.getElementById("secret").style.display = "block";
     typeMessage();
